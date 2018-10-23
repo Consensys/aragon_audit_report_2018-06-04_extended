@@ -1,0 +1,26 @@
+Solidity is flattened to single apps/contracts with
+npm install truffle-flattener
+(from truffle directory)
+truffle-flattenr contracts/Whatever.sol > whatever.sol
+
+
+$ myth --version
+Mythril version v0.18.12
+
+myth -x aragon-finance-flat.sol > aragon-finance-myth.txt
+
+
+$ pip3 show slither-analyzer
+Name: slither-analyzer
+Version: 0.1.0
+...
+
+slither --disable-solc-warnings --exclude-informational aragon-finance-flat.sol 2>&1 | cat > aragon-finance-slither.txt
+
+manticore --version
+Manticore 0.2.1.1
+
+manticore whatever.sol --contract Whatever --detect-all --workspace mcore_whatever
+
+Turns out that for 20-25 contract targets like in Aragon, manticore takes a
+while, so maybe I'll be uploading some additional results later.

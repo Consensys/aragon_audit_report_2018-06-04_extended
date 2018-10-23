@@ -1,0 +1,4 @@
+INFO:Detectors:[91m Uninitialized state variable in aragon-voting-flat.sol, Contract: MiniMeToken, Variable: totalSupplyHistory, Used in ['totalSupplyAt', 'generateTokens', 'destroyTokens'][0m
+INFO:Detectors:[91m Uninitialized state variable in aragon-voting-flat.sol, Contract: MiniMeToken, Variable: balances, Used in ['doTransfer', 'balanceOfAt', 'generateTokens', 'destroyTokens'][0m
+INFO:Detectors:[91m Uninitialized state variable in aragon-voting-flat.sol, Contract: Voting, Variable: votes, Used in ['canVote', 'canExecute', 'getVote', 'getVoteMetadata', 'getVoterState', '_newVote', '_vote', '_executeVote'][0m
+INFO:Slither:aragon-voting-flat.sol analyzed (31 contracts), 3 result(s) found

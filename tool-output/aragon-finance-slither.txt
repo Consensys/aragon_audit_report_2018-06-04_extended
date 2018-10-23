@@ -1,0 +1,4 @@
+INFO:Detectors:[91m Uninitialized state variable in aragon-finance-flat.sol, Contract: Finance, Variable: periods, Used in ['getPeriod', 'getPeriodTokenStatement', '_newPeriod', '_recordTransaction', '_tryTransitionAccountingPeriod', '_getRemainingBudget'][0m
+INFO:Detectors:[91m Uninitialized state variable in aragon-finance-flat.sol, Contract: Finance, Variable: transactions, Used in ['getTransaction', '_recordTransaction'][0m
+INFO:Detectors:[91m Arbitrary send in aragon-finance-flat.sol Contract: Finance, Function: _deposit, Calls: ['vault.deposit.value(_amount)(ETH,_amount)'][0m
+INFO:Slither:aragon-finance-flat.sol analyzed (27 contracts), 3 result(s) found

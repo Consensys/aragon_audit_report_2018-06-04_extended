@@ -1,0 +1,1313 @@
+Compilation warnings encountered:
+
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:43:44: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (ens.owner(node) != msg.sender) throw;
+                                           ^---^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:164:53: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (((contentType - 1) & contentType) != 0) throw;
+                                                    ^---^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:20:48: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (records[node].owner != msg.sender) throw;
+                                               ^---^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:12:3: Warning: No visibility specified. Defaulting to "public".
+  function ThrowProxy(address _target) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:17:3: Warning: No visibility specified. Defaulting to "public".
+  function() {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:21:3: Warning: No visibility specified. Defaulting to "public".
+  function assertThrows(string msg) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:25:3: Warning: No visibility specified. Defaulting to "public".
+  function assertItDoesntThrow(string msg) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:29:3: Warning: No visibility specified. Defaulting to "public".
+  function execute() returns (bool) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:12:5: Warning: No visibility specified. Defaulting to "public".
+    function dontReturn() {}
+    ^----------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:13:5: Warning: No visibility specified. Defaulting to "public".
+    function fail() { revert(); }
+    ^---------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:14:5: Warning: No visibility specified. Defaulting to "public".
+    function die() { selfdestruct(0); }
+    ^---------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:24:5: Warning: No visibility specified. Defaulting to "public".
+    function beforeAll() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:28:5: Warning: No visibility specified. Defaulting to "public".
+    function beforeEach() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:32:5: Warning: No visibility specified. Defaulting to "public".
+    function testMinReturn0WithoutReturn() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:36:5: Warning: No visibility specified. Defaulting to "public".
+    function testMinReturn0WithReturn() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:40:5: Warning: No visibility specified. Defaulting to "public".
+    function testMinReturn32WithReturn() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:44:5: Warning: No visibility specified. Defaulting to "public".
+    function testFailsIfReturnLessThanMin() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:49:5: Warning: No visibility specified. Defaulting to "public".
+    function revertIfReturnLessThanMin() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:53:5: Warning: No visibility specified. Defaulting to "public".
+    function testSelfdestructIsRevertedWithMinReturn() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:58:5: Warning: No visibility specified. Defaulting to "public".
+    function revertIfReturnLessThanMinAndDie() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:62:5: Warning: No visibility specified. Defaulting to "public".
+    function testFailIfReverts() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:67:5: Warning: No visibility specified. Defaulting to "public".
+    function revertCall() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:71:5: Warning: No visibility specified. Defaulting to "public".
+    function testIsContractZero() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:76:5: Warning: No visibility specified. Defaulting to "public".
+    function testIsContractAddress() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:83:5: Warning: No visibility specified. Defaulting to "public".
+    function testDieIfMinReturn0() {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:85:36: Warning: This declaration shadows an existing declaration.
+    function setAddr(bytes32 node, address addr) only_owner(node) public {
+                                   ^----------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:75:5: The shadowed declaration is here:
+    function addr(bytes32 node) public constant returns (address ret) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:130:36: Warning: This declaration shadows an existing declaration.
+    function setName(bytes32 node, string name) only_owner(node) public {
+                                   ^---------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:120:5: The shadowed declaration is here:
+    function name(bytes32 node) public constant returns (string ret) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:58:37: Warning: This declaration shadows an existing declaration.
+    function setOwner(bytes32 node, address owner) only_owner(node) public {
+                                    ^-----------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:34:5: The shadowed declaration is here:
+    function owner(bytes32 node) public constant returns (address) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:70:59: Warning: This declaration shadows an existing declaration.
+    function setSubnodeOwner(bytes32 node, bytes32 label, address owner) only_owner(node) public {
+                                                          ^-----------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:34:5: The shadowed declaration is here:
+    function owner(bytes32 node) public constant returns (address) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:81:40: Warning: This declaration shadows an existing declaration.
+    function setResolver(bytes32 node, address resolver) only_owner(node) public {
+                                       ^--------------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:41:5: The shadowed declaration is here:
+    function resolver(bytes32 node) public constant returns (address) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:91:35: Warning: This declaration shadows an existing declaration.
+    function setTTL(bytes32 node, uint64 ttl) only_owner(node) public {
+                                  ^--------^
+/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:48:5: The shadowed declaration is here:
+    function ttl(bytes32 node) public constant returns (uint64) {
+    ^
+Spanning multiple lines.
+
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:21:25: Warning: This declaration shadows a builtin symbol.
+  function assertThrows(string msg) {
+                        ^--------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ThrowProxy.sol:25:32: Warning: This declaration shadows a builtin symbol.
+  function assertItDoesntThrow(string msg) {
+                               ^--------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:218:1: Warning: Variable is declared as a storage pointer. Use an explicit "storage" keyword to silence this warning.
+Param param = permissionParams[permissions[permissionHash(_entity, _app, _role)]][_index];
+^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/IEVMScriptRegistry.sol:16:57: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    bytes32 constant public EVMSCRIPT_REGISTRY_APP_ID = apmNamehash("evmreg");
+                                                        ^-------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:84:25: Warning: The "returndatasize" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            let size := returndatasize
+                        ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:90:17: Warning: The "returndatacopy" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+                returndatacopy(ret, 0x20, sub(size, 0x20)) // copy return data
+                ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:617:28: Warning: The "returndatasize" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+        assembly { size := returndatasize }
+                           ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:632:13: Warning: The "returndatacopy" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            returndatacopy(ptr, 0, size) // copy return from above `call`
+            ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:44:21: Warning: The "returndatasize" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            size := returndatasize
+                    ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:56:13: Warning: The "returndatacopy" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            returndatacopy(ptr, 0, size)
+            ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/KernelStorage.sol:17:45: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    bytes32 constant public KERNEL_APP_ID = apmNamehash("kernel");
+                                            ^-------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/KernelStorage.sol:20:42: Warning: Initial value for constant variable has to be compile-time constant. This will fail to compile with the next breaking version change.
+    bytes32 constant public ACL_APP_ID = apmNamehash("acl");
+                                         ^----------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/CallsScript.sol:89:10: Warning: Decimal literal assigned to bytesXX variable will be left-aligned. Use an explicit conversion to silence this warning.
+ret[0] = 1;
+         ^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:112:25: Warning: The "returndatasize" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            let size := returndatasize
+                        ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:116:13: Warning: The "returndatacopy" instruction is only available after the Metropolis hard fork. Before that it acts as an invalid instruction.
+            returndatacopy(add(ret, 0x20), 0, size) // copy return data
+            ^------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/ENS.sol:28:17: Warning: Decimal literal assigned to bytesXX variable will be left-aligned. Use an explicit conversion to silence this warning.
+        records[0].owner = msg.sender;
+                ^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:5:38: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function arr() internal returns (uint256[] r) {}
+                                     ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/CallsScript.sol:30:40: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function execScript(bytes _script, bytes _input, address[] _blacklist) external returns (bytes) {__FunctionCoverageCallsScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/CallsScript.sol',1);
+                                       ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DeployDelegateScript.sol:17:5: Warning: Variable covers a large part of storage and thus makes collisions likely. Either use mappings or dynamic arrays and allow their size to be increased only in small quantities per transaction.
+    uint256[2**254] private cacheStorageOffset;
+    ^----------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:18:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                        ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:18:38: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                     ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:18:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                    ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:18:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                                  ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:25:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                        ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:25:38: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                     ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:25:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                    ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:25:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                                  ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:32:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                        ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:32:38: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                     ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:32:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                    ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:32:67: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                                  ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:39:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                        ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:39:38: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                     ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:39:53: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function canPerform(address who, address where, bytes32 what, uint256[] how) public constant returns (bool) {
+                                                    ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/APMRegistryFactoryMock.sol:19:21: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function newAPM(bytes32 tld, bytes32 label, address _root) public returns (APMRegistry) {}
+                    ^---------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/APMRegistryFactoryMock.sol:19:34: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function newAPM(bytes32 tld, bytes32 label, address _root) public returns (APMRegistry) {}
+                                 ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/APMRegistryFactoryMock.sol:19:49: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function newAPM(bytes32 tld, bytes32 label, address _root) public returns (APMRegistry) {}
+                                                ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/MockDyingScriptExecutor.sol:7:25: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function execScript(bytes script, bytes input, address[] blacklist) external returns (bytes) {
+                        ^----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/MockDyingScriptExecutor.sol:7:52: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function execScript(bytes script, bytes input, address[] blacklist) external returns (bytes) {
+                                                   ^-----------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:199:116: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getPermissionParamsLength(address _entity, address _app, bytes32 _role) external view returns (uint) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',9);
+                                                                                                                   ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:201:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',155);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:202:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:203:37: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+return permissionParams[permissions[permissionHash(_entity, _app, _role)]].length;
+                                    ^----------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:236:95: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getPermissionManager(address _app, bytes32 _role) public view returns (address) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',11);
+                                                                                              ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:238:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',180);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:239:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',18);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:240:26: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+return permissionManager[roleHash(_app, _role)];
+                         ^-------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:251:120: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function hasPermission(address _who, address _where, bytes32 _what, bytes memory _how) public view returns (bool) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',12);
+                                                                                                                       ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:253:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',192);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:255:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',193);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:256:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',19);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:258:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',194);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:264:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',199);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:265:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',20);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:269:124: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function hasPermission(address _who, address _where, bytes32 _what, uint256[] memory _how) public view returns (bool) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13);
+                                                                                                                           ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:271:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',203);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:272:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',21);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:273:33: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+bytes32 whoParams = permissions[permissionHash(_who, _where, _what)];
+                                ^---------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:274:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',204);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:275:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',22);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:276:83: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (whoParams != bytes32(0) && evalParams(whoParams, _who, _where, _what, _how)) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',5,0);
+                                                                                  ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:277:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',205);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:278:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',23);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:280:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',5,1);}
+                ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:283:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',208);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:284:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',24);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:285:33: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+bytes32 anyParams = permissions[permissionHash(ANY_ENTITY, _where, _what)];
+                                ^---------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:286:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',209);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:287:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',25);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:288:89: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (anyParams != bytes32(0) && evalParams(anyParams, ANY_ENTITY, _where, _what, _how)) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',6,0);
+                                                                                        ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:289:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',210);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:290:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',26);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:292:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',6,1);}
+                ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:295:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',213);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:296:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',27);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:300:101: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function hasPermission(address _who, address _where, bytes32 _what) public view returns (bool) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',14);
+                                                                                                    ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:302:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',217);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:303:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',28);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:305:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',218);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:306:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',29);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:317:6: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',15);
+     ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:319:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',229);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:320:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',30);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:321:39: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (_paramsHash == EMPTY_PARAM_HASH) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',7,0);
+                                      ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:322:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',230);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:323:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',31);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:325:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',7,1);}
+                ^------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:328:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',233);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:329:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',32);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:407:6: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',19);
+     ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:409:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',280);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:410:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',45);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:411:56: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (_paramId >= permissionParams[_paramsHash].length) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',10,0);
+                                                       ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:412:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',46);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:414:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',10,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:417:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',284);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:418:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',47);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:421:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',286);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:422:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',48);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:423:37: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (param.id == LOGIC_OP_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',11,0);
+                                    ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:424:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',287);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:425:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',49);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:427:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',11,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:430:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',290);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:432:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',291);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:433:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',50);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:437:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',294);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:438:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',51);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:439:35: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (param.id == ORACLE_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',12,0);
+                                  ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:440:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',295);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:441:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',52);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:442:83: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+value; (,value) = checkOracle(address(param.value), _who, _where, _what, _how) ? (__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13,0),1) : (__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13,1),0);
+                                                                                  ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:442:183: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+value; (,value) = checkOracle(address(param.value), _who, _where, _what, _how) ? (__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13,0),1) : (__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',13,1),0);
+                                                                                                                                                                                      ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:443:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',296);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:444:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',53);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:446:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        } else { __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',54);
+                 ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:447:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',12,1);if (param.id == BLOCK_NUMBER_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',14,0);
+^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:447:135: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',12,1);if (param.id == BLOCK_NUMBER_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',14,0);
+                                                                                                                                      ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:448:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',298);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:449:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',55);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:451:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        } else { __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',56);
+                 ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:452:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',14,1);if (param.id == TIMESTAMP_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',15,0);
+^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:452:132: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',14,1);if (param.id == TIMESTAMP_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',15,0);
+                                                                                                                                   ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:453:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',300);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:454:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',57);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:456:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        } else { __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',58);
+                 ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:457:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',15,1);if (param.id == SENDER_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',16,0);
+^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:457:129: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',15,1);if (param.id == SENDER_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',16,0);
+                                                                                                                                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:458:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',302);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:459:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',59);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:461:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        } else { __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',60);
+                 ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:462:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',16,1);if (param.id == PARAM_VALUE_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',17,0);
+^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:462:134: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',16,1);if (param.id == PARAM_VALUE_PARAM_ID) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',17,0);
+                                                                                                                                     ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:463:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',304);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:464:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',61);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:466:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        } else {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',17,1);
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:467:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',306);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:468:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',62);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:469:31: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (param.id >= _how.length) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',18,0);
+                              ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:470:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',307);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:471:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                 __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',63);
+                 ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:473:21: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+            }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',18,1);}
+                    ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:475:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',64);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:479:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',312);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:480:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',65);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:481:30: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (Op(param.op) == Op.RET) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',19,0);
+                             ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:482:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',313);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:483:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',66);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:485:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',19,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:488:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',316);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:489:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',67);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:490:8: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+return compare(value, Op(param.op), comparedTo);
+       ^--------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:493:150: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function evalLogic(Param _param, bytes32 _paramsHash, address _who, address _where, bytes32 _what, uint256[] _how) internal view returns (bool) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',20);
+                                                                                                                                                     ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:495:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',320);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:496:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',68);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:497:35: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (Op(_param.op) == Op.IF_ELSE) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',20,0);
+                                  ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:498:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',321);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:499:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',69);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:500:37: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+var (condition, success, failure) = decodeParamsList(uint256(_param.value));
+                                    ^-------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:501:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',322);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:502:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',70);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:505:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',324);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:506:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',71);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:508:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',20,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:511:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',327);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:512:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',72);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:513:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+var (v1, v2,) = decodeParamsList(uint256(_param.value));
+                ^-------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:514:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',328);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:515:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',73);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:518:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',330);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:519:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',74);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:520:31: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (Op(_param.op) == Op.NOT) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',21,0);
+                              ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:521:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',331);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:522:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',75);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:524:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',21,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:527:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',334);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:528:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',76);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:529:36: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (r1 && Op(_param.op) == Op.OR) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',22,0);
+                                   ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:530:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',335);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:531:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',77);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:533:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',22,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:536:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',338);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:537:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',78);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:538:38: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (!r1 && Op(_param.op) == Op.AND) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',23,0);
+                                     ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:539:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',339);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:540:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',79);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:542:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',23,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:545:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',342);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:546:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',80);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:549:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',344);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:550:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',81);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:551:31: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (Op(_param.op) == Op.XOR) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',24,0);
+                              ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:552:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',345);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:553:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',82);
+             ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:555:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',24,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:558:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',83);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:593:138: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function checkOracle(address _oracleAddr, address _who, address _where, bytes32 _what, uint256[] _how) internal view returns (bool) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',22);
+                                                                                                                                         ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:595:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',362);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:596:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',97);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:600:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',365);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:601:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',98);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:602:11: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+bool ok = _oracleAddr.call(sig, _who, _where, _what, 0x80, _how.length, _how);
+          ^-----------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:605:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',368);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:606:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',99);
+         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:607:11: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (!ok) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',31,0);
+          ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:608:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',369);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:609:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',100);
+             ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:611:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',31,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:614:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',372);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:616:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',373);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:618:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',374);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:619:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',101);
+         ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:620:18: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (size != 32) {__BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',32,0);
+                 ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:621:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',375);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:622:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',102);
+             ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:624:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',32,1);}
+                ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:627:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',378);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:629:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',379);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:637:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',386);
+^------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:638:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',103);
+         ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:669:53: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function time() internal view returns (uint64) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',26);
+                                                    ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:670:3: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+  __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',108);
+  ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:673:56: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function blockN() internal view returns (uint256) {__FunctionCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',27);
+                                                       ^-------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACL.sol:674:3: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+  __StatementCoverageACL('/Users/thec00n/work/clients/aragon/aragonOS/contracts/acl/ACL.sol',109);
+  ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:5:5: Warning: Function state mutability can be restricted to pure
+    function arr() internal returns (uint256[] r) {}
+    ^----------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:43:5: Warning: Function state mutability can be restricted to pure
+    function arr(uint256 _a) internal returns (uint256[] r) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:48:5: Warning: Function state mutability can be restricted to pure
+    function arr(uint256 _a, uint256 _b) internal returns (uint256[] r) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:54:5: Warning: Function state mutability can be restricted to pure
+    function arr(uint256 _a, uint256 _b, uint256 _c) internal returns (uint256[] r) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:61:5: Warning: Function state mutability can be restricted to pure
+    function arr(uint256 _a, uint256 _b, uint256 _c, uint256 _d) internal returns (uint256[] r) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:69:5: Warning: Function state mutability can be restricted to pure
+    function arr(uint256 _a, uint256 _b, uint256 _c, uint256 _d, uint256 _e) internal returns (uint256[] r) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:81:5: Warning: Function state mutability can be restricted to pure
+    function decodeParamOp(uint256 _x) internal returns (uint8 b) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:85:5: Warning: Function state mutability can be restricted to pure
+    function decodeParamId(uint256 _x) internal returns (uint8 b) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/acl/ACLSyntaxSugar.sol:89:5: Warning: Function state mutability can be restricted to pure
+    function decodeParamsList(uint256 _x) internal returns (uint32 a, uint32 b, uint32 c) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/APMRegistry.sol:163:59: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function repoAppId() internal view returns (bytes32) {__FunctionCoverageAPMRegistryConstants('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/APMRegistry.sol',6);
+                                                          ^-------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/APMRegistry.sol:165:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAPMRegistryConstants('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/APMRegistry.sol',103);
+^-------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/APMRegistry.sol:166:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAPMRegistryConstants('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/APMRegistry.sol',18);
+         ^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:96:118: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getLatest() public view returns (uint16[3] semanticVersion, address contractAddress, bytes contentURI) {__FunctionCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',2);
+                                                                                                                     ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:98:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',56);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:99:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',14);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:103:160: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getLatestForContractAddress(address _contractAddress) public view returns (uint16[3] semanticVersion, address contractAddress, bytes contentURI) {__FunctionCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',3);
+                                                                                                                                                               ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:105:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',60);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:106:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',15);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:110:155: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getBySemanticVersion(uint16[3] _semanticVersion) public view returns (uint16[3] semanticVersion, address contractAddress, bytes contentURI) {__FunctionCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',4);
+                                                                                                                                                          ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:112:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',64);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:113:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',16);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:114:44: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+return getByVersionId(versionIdForSemantic[semanticVersionHash(_semanticVersion)]);
+                                           ^-----------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:117:138: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getByVersionId(uint _versionId) public view returns (uint16[3] semanticVersion, address contractAddress, bytes contentURI) {__FunctionCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',5);
+                                                                                                                                         ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:119:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',68);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:120:9: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        __AssertPreCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',6);
+        ^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:121:2: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+ __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',17);
+ ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:122:25: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+require(_versionId > 0);__AssertPostCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',6);
+                        ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:124:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',69);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:125:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',18);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:127:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',70);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:128:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',19);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:132:64: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getVersionsCount() public view returns (uint256) {__FunctionCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',6);
+                                                               ^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:134:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',74);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:135:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',20);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:137:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',75);
+^-------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apm/Repo.sol:138:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageRepo('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apm/Repo.sol',21);
+         ^----------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyBase.sol:59:74: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getAppBase(bytes32 _appId) internal view returns (address) {__FunctionCoverageAppProxyBase('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyBase.sol',2);
+                                                                         ^-------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyBase.sol:61:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAppProxyBase('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyBase.sol',36);
+^------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyBase.sol:62:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAppProxyBase('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyBase.sol',7);
+         ^--------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyPinned.sol:36:62: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function implementation() public view returns (address) {__FunctionCoverageAppProxyPinned('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyPinned.sol',2);
+                                                             ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyPinned.sol:38:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAppProxyPinned('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyPinned.sol',24);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyPinned.sol:39:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAppProxyPinned('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyPinned.sol',3);
+         ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyUpgradeable.sol:29:62: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function implementation() public view returns (address) {__FunctionCoverageAppProxyUpgradeable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyUpgradeable.sol',2);
+                                                             ^---------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyUpgradeable.sol:31:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAppProxyUpgradeable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyUpgradeable.sol',23);
+^--------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AppProxyUpgradeable.sol:32:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAppProxyUpgradeable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AppProxyUpgradeable.sol',1);
+         ^----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:40:103: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function canPerform(address _sender, bytes32 _role, uint256[] params) public view returns (bool) {__FunctionCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',3);
+                                                                                                      ^-------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:43:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',24);
+^------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:44:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',3);
+         ^--------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:45:25: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (params.length > 0) {__BranchCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',3,0);
+                        ^-------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:46:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',25);
+^------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:47:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',4);
+             ^--------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:49:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',26);
+^------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:54:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',3,1);}
+                ^-------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:56:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',31);
+^------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/apps/AragonApp.sol:57:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageAragonApp('/Users/thec00n/work/clients/aragon/aragonOS/contracts/apps/AragonApp.sol',5);
+         ^--------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:65:72: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function isContract(address _target) internal view returns (bool) {__FunctionCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',3);
+                                                                       ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:67:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',44);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:68:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',4);
+         ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:69:29: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (_target == address(0)) {__BranchCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',3,0);
+                            ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:70:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',45);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:71:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',5);
+             ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:73:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',3,1);}
+                ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:76:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',48);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:78:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',49);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:80:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',50);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/DelegateProxy.sol:81:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageDelegateProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/DelegateProxy.sol',6);
+         ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:38:70: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getInitializationBlock() public view returns (uint256) {__FunctionCoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',3);
+                                                                     ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:40:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',21);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:41:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',3);
+         ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:60:64: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getBlockNumber() internal view returns (uint256) {__FunctionCoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',5);
+                                                               ^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:62:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',37);
+^----------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/common/Initializable.sol:63:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageInitializable('/Users/thec00n/work/clients/aragon/aragonOS/contracts/common/Initializable.sol',5);
+         ^------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/ens/ENSSubdomainRegistrar.sol:135:69: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getAddr(bytes32 node) internal view returns (address) {__FunctionCoverageENSSubdomainRegistrar('/Users/thec00n/work/clients/aragon/aragonOS/contracts/ens/ENSSubdomainRegistrar.sol',8);
+                                                                    ^------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/ens/ENSSubdomainRegistrar.sol:137:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageENSSubdomainRegistrar('/Users/thec00n/work/clients/aragon/aragonOS/contracts/ens/ENSSubdomainRegistrar.sol',78);
+^-----------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/ens/ENSSubdomainRegistrar.sol:138:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageENSSubdomainRegistrar('/Users/thec00n/work/clients/aragon/aragonOS/contracts/ens/ENSSubdomainRegistrar.sol',19);
+         ^--------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/ens/ENSSubdomainRegistrar.sol:140:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageENSSubdomainRegistrar('/Users/thec00n/work/clients/aragon/aragonOS/contracts/ens/ENSSubdomainRegistrar.sol',79);
+^-----------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/ens/ENSSubdomainRegistrar.sol:141:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageENSSubdomainRegistrar('/Users/thec00n/work/clients/aragon/aragonOS/contracts/ens/ENSSubdomainRegistrar.sol',20);
+         ^--------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:53:78: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getScriptExecutor(bytes _script) public view returns (address) {__FunctionCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',4);
+                                                                             ^----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:55:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',38);
+^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:56:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',4);
+         ^-----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:57:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+uint256 id = _script.getSpecId();
+             ^-----------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:59:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',40);
+^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:60:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',5);
+         ^-----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:61:41: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (id == 0 || id >= executors.length) {__BranchCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',1,0);
+                                        ^----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:62:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',41);
+^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:63:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',6);
+             ^-----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:65:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',1,1);}
+                ^----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:68:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',44);
+^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:69:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',7);
+         ^-----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:71:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',45);
+^---------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRegistry.sol:72:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRegistry('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRegistry.sol',8);
+         ^-----------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:59:83: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getExecutor(bytes _script) public view returns (IEVMScriptExecutor) {__FunctionCoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',2);
+                                                                                  ^------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:61:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',31);
+^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:62:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',9);
+         ^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:67:80: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getExecutorRegistry() internal view returns (IEVMScriptRegistry) {__FunctionCoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',3);
+                                                                               ^------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:69:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',36);
+^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:70:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',10);
+         ^--------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:72:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',37);
+^-----------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/EVMScriptRunner.sol:73:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageEVMScriptRunner('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/EVMScriptRunner.sol',11);
+         ^--------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:78:72: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function isContract(address _target) internal view returns (bool) {__FunctionCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',3);
+                                                                       ^--------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:80:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',46);
+^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:81:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',9);
+         ^---------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:82:29: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (_target == address(0)) {__BranchCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',6,0);
+                            ^--------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:83:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',47);
+^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:84:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',10);
+             ^----------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:86:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',6,1);}
+                ^--------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:89:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',50);
+^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:91:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',51);
+^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:93:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',52);
+^-------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/evmscript/executors/DelegateScript.sol:94:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageDelegateScript('/Users/thec00n/work/clients/aragon/aragonOS/contracts/evmscript/executors/DelegateScript.sol',11);
+         ^----------------------------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:100:65: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function getApp(bytes32 _id) public view returns (address) {__FunctionCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',5);
+                                                                ^---------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:102:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',72);
+^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:103:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',10);
+         ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:111:48: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function acl() public view returns (IACL) {__FunctionCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',6);
+                                               ^---------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:113:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',80);
+^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:114:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',11);
+         ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:126:113: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function hasPermission(address _who, address _where, bytes32 _what, bytes _how) public view returns (bool) {__FunctionCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',7);
+                                                                                                                ^---------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:128:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',92);
+^--------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:129:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',12);
+         ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:184:72: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function isContract(address _target) internal view returns (bool) {__FunctionCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',10);
+                                                                       ^----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:186:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',117);
+^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:187:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',24);
+         ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:188:29: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+if (_target == address(0)) {__BranchCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',5,0);
+                            ^---------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:189:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',118);
+^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:190:14: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+             __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',25);
+             ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:192:17: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+        }else { __BranchCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',5,1);}
+                ^---------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:195:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',121);
+^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:197:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',122);
+^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:199:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',123);
+^---------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/Kernel.sol:200:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernel('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/Kernel.sol',26);
+         ^-----------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/KernelProxy.sol:50:62: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function implementation() public view returns (address) {__FunctionCoverageKernelProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/KernelProxy.sol',4);
+                                                             ^-------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/KernelProxy.sol:52:1: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+__CoverageKernelProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/KernelProxy.sol',36);
+^------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/kernel/KernelProxy.sol:53:10: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+         __StatementCoverageKernelProxy('/Users/thec00n/work/clients/aragon/aragonOS/contracts/kernel/KernelProxy.sol',4);
+         ^--------------------------------------------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/ens/PublicResolver.sol:60:5: Warning: Function state mutability can be restricted to pure
+    function supportsInterface(bytes4 interfaceID) public returns (bool) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/minime/MiniMeToken.sol:305:56: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                return parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock));
+                                                       ^------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/minime/MiniMeToken.sol:329:50: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+                return parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock));
+                                                 ^------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/minime/MiniMeToken.sol:489:5: Warning: Function state mutability can be restricted to pure
+    function min(uint a, uint b) internal returns (uint) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/Math.sol:9:3: Warning: Function state mutability can be restricted to pure
+  function max64(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/Math.sol:13:3: Warning: Function state mutability can be restricted to pure
+  function min64(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/Math.sol:17:3: Warning: Function state mutability can be restricted to pure
+  function max256(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/Math.sol:21:3: Warning: Function state mutability can be restricted to pure
+  function min256(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath.sol:9:3: Warning: Function state mutability can be restricted to pure
+  function mul(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath.sol:15:3: Warning: Function state mutability can be restricted to pure
+  function div(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath.sol:22:3: Warning: Function state mutability can be restricted to pure
+  function sub(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath.sol:27:3: Warning: Function state mutability can be restricted to pure
+  function add(uint256 a, uint256 b) internal returns (uint256) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath64.sol:9:3: Warning: Function state mutability can be restricted to pure
+  function mul(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath64.sol:15:3: Warning: Function state mutability can be restricted to pure
+  function div(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath64.sol:22:3: Warning: Function state mutability can be restricted to pure
+  function sub(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/contracts/lib/zeppelin/math/SafeMath64.sol:27:3: Warning: Function state mutability can be restricted to pure
+  function add(uint64 a, uint64 b) internal returns (uint64) {
+  ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:11:5: Warning: Function state mutability can be restricted to pure
+    function returnSomething() public constant returns (bool) { return true; }
+    ^------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:12:5: Warning: Function state mutability can be restricted to pure
+    function dontReturn() {}
+    ^----------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/TestDelegateProxy.sol:13:5: Warning: Function state mutability can be restricted to pure
+    function fail() { revert(); }
+    ^---------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/helpers/ACLHelper.sol:11:5: Warning: Function state mutability can be restricted to pure
+    function encodeIfElse(uint256 condition, uint256 successParam, uint256 failureParam) internal constant returns (uint240) {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/AppStub.sol:18:39: Warning: Function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.
+    function requiresInitialization() isInitialized public constant returns (bool) {
+                                      ^-----------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/Delegator.sol:12:5: Warning: Function state mutability can be restricted to pure
+    function execReturnValue(uint i) public constant returns (uint) { return i; }
+    ^---------------------------------------------------------------------------^
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/ExecutionTarget.sol:12:5: Warning: Function state mutability can be restricted to pure
+    function failExecute() public constant {
+    ^
+Spanning multiple lines.
+,/Users/thec00n/work/clients/aragon/aragonOS/coverageEnv/test/mocks/UpgradedKernel.sol:9:5: Warning: Function state mutability can be restricted to pure
+    function isUpgraded() public constant returns (bool) {
+    ^
+Spanning multiple lines.
+
