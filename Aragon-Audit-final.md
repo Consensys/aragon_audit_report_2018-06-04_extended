@@ -3,66 +3,70 @@
 
 <img height="120px" Hspace="30" Vspace="10" align="right" src="static-content/diligence.png"/> 
 
-<!-- MarkdownTOC -->
-<!-- Don't remove this -->
-* [1 Summary](#1-summary)
-  * [1.1 Audit Dashboard](#11-audit-dashboard)
-  * [1.2 Audit Goals](#12-audit-goals)
-  * [1.3 System Overview](#13-system-overview)
-  * [1.4 Key Observations/Recommendations](#14-key-observationsrecommendations)
-  * [1.5 Issue Remediation](#15-issue-remediation)
-* [2 Issue Overview](#2-issue-overview)
-* [3 Issue Detail](#3-issue-detail)
-  * [3.1 Implementation of DelegateScript allows for caller contract storage write access](#31-implementation-of-delegatescript-allows-for-caller-contract-storage-write-access)
-  * [3.2 Authorization checks are disabled if AragonApp not configured with a kernel](#32-authorization-checks-are-disabled-if-aragonapp-not-configured-with-a-kernel)
-  * [3.3 Implementation of DeployDelegateScript allows for caller contract storage write access](#33-implementation-of-deploydelegatescript-allows-for-caller-contract-storage-write-access)
-  * [3.4 Kernel default implementation is not initialised](#34-kernel-default-implementation-is-not-initialised)
-  * [3.5 Invalid budget value passed to authP modifier for CHANGE_BUDGETS_ROLE](#35-invalid-budget-value-passed-to-authp-modifier-for-change_budgets_role)
-  * [3.6 isInitialized modifier missing from Finance fallback function](#36-isinitialized-modifier-missing-from-finance-fallback-function)
-  * [3.7 transitionsPeriod modifier missing from Finance fallback function](#37-transitionsperiod-modifier-missing-from-finance-fallback-function)
-  * [3.8 Vault initialization creates dead contracts and breaks internal invariants](#38-vault-initialization-creates-dead-contracts-and-breaks-internal-invariants)
-  * [3.9 transitionsPeriod modifier can lock up Finance contract if configured with short periodDuration](#39-transitionsperiod-modifier-can-lock-up-finance-contract-if-configured-with-short-periodduration)
-  * [3.10 Voting does not check that functions are only called after initialization](#310-voting-does-not-check-that-functions-are-only-called-after-initialization)
-  * [3.11 Vault does not check that functions are only called after initialization](#311-vault-does-not-check-that-functions-are-only-called-after-initialization)
-  * [3.12 Insufficient security control protectState](#312-insufficient-security-control-protectstate)
-  * [3.13 Insecure delegatecall() in DelegateScript and DeployDelegateScript](#313-insecure-delegatecall-in-delegatescript-and-deploydelegatescript)
-  * [3.14 Insufficient security control kernelIntegrity](#314-insufficient-security-control-kernelintegrity)
-  * [3.15 Add isInitialized modifier to public TokenManager functions](#315-add-isinitialized-modifier-to-public-tokenmanager-functions)
-  * [3.16 Unnecessary casting between unint64 and uint256](#316-unnecessary-casting-between-unint64-and-uint256)
-  * [3.17 Add missing isInitialized modifier to Finance functions](#317-add-missing-isinitialized-modifier-to-finance-functions)
-  * [3.18 Unnecessary Side-stepping of Solidity's static type system](#318-unnecessary-side-stepping-of-soliditys-static-type-system)
-  * [3.19 Add require to Finance.initialize that checks _vault is not null](#319-add-require-to-financeinitialize-that-checks-_vault-is-not-null)
-  * [3.20 Vault test cases insufficient](#320-vault-test-cases-insufficient)
-  * [3.21 IVaultConnector interface ambiguity could cause locked ether](#321-ivaultconnector-interface-ambiguity-could-cause-locked-ether)
-  * [3.22 NPM installed AragonOS contracts do not match audited AragonOS contracts](#322-npm-installed-aragonos-contracts-do-not-match-audited-aragonos-contracts)
-  * [3.23 Frequent unsafe use of address type instead of contract types](#323-frequent-unsafe-use-of-address-type-instead-of-contract-types)
-  * [3.24 Possible unsafe cast in EVMScriptRegistryFactory](#324-possible-unsafe-cast-in-evmscriptregistryfactory)
-  * [3.25 Explicitly define visibility for all state variables](#325-explicitly-define-visibility-for-all-state-variables)
-  * [3.26 Highlight potentially insecure functions](#326-highlight-potentially-insecure-functions)
-  * [3.27 NewPayment event not created for immediate payments](#327-newpayment-event-not-created-for-immediate-payments)
-  * [3.28 Incorrect canExecute() vote check](#328-incorrect-canexecute-vote-check)
-  * [3.29 getTimestamp() is redundant with solidity's built in block.timestamp](#329-gettimestamp-is-redundant-with-soliditys-built-in-blocktimestamp)
-  * [3.30 Redundant authentication function Voting.canForward()](#330-redundant-authentication-function-votingcanforward)
-  * [3.31 Log and verify EVMScript return values](#331-log-and-verify-evmscript-return-values)
-  * [3.32 Vault depends on complex internal invariants that are unchecked](#332-vault-depends-on-complex-internal-invariants-that-are-unchecked)
-* [4 Threat Model](#4-threat-model)
-  * [4.1 Overview](#41-overview)
-  * [4.2 DemocracyTemplate based DAO](#42-democracytemplate-based-dao)
-* [5 Tool based analysis](#5-tool-based-analysis)
-  * [5.1 Mythril](#51-mythril)
-  * [5.2 Solhint](#52-solhint)
-  * [5.3 Odyssey](#53-odyssey)
-* [6 Test Coverage Measurement](#6-test-coverage-measurement)
-* [Appendix 1 - File Hashes](#appendix-1---file-hashes)
-* [Appendix 2 - Severity](#appendix-2---severity)
-  * [A.2.1 - Minor](#a21---minor)
-  * [A.2.2 - Medium](#a22---medium)
-  * [A.2.3 - Major](#a23---major)
-  * [A.2.4 - Critical](#a24---critical)
-* [Appendix 3 - Storage map of org muzi5.aragonpm.eth](#appendix-3---storage-map-of-org-muzi5aragonpmeth)
-* [Appendix 4 - aragonOS inheritance tree](#appendix-4---aragonos-inheritance-tree)
+<!-- MarkdownTOC levels="2,3" autolink="true" -->
 
-<!-- Don't remove this -->
+- [1 Summary](#1-summary)
+	- [1.1 Audit Dashboard](#11-audit-dashboard)
+	- [1.2 Audit Goals](#12-audit-goals)
+	- [1.3 System Overview](#13-system-overview)
+	- [1.4 Key Observations/Recommendations](#14-key-observationsrecommendations)
+	- [1.5 Issue Remediation](#15-issue-remediation)
+- [2 Issue Overview](#2-issue-overview)
+- [3 Issue Detail](#3-issue-detail)
+	- [3.1 Implementation of DelegateScript allows for caller contract storage write access](#31-implementation-of-delegatescript-allows-for-caller-contract-storage-write-access)
+	- [3.2 Authorization checks are disabled if AragonApp not configured with a kernel](#32-authorization-checks-are-disabled-if-aragonapp-not-configured-with-a-kernel)
+	- [3.3 Implementation of DeployDelegateScript allows for caller contract storage write access](#33-implementation-of-deploydelegatescript-allows-for-caller-contract-storage-write-access)
+	- [3.4 Kernel default implementation is not initialised](#34-kernel-default-implementation-is-not-initialised)
+	- [3.5 Invalid budget value passed to authP modifier for CHANGE_BUDGETS_ROLE](#35-invalid-budget-value-passed-to-authp-modifier-for-change_budgets_role)
+	- [3.6 isInitialized modifier missing from Finance fallback function](#36-isinitialized-modifier-missing-from-finance-fallback-function)
+	- [3.7 transitionsPeriod modifier can lock up Finance contract if configured with short periodDuration](#37-transitionsperiod-modifier-can-lock-up-finance-contract-if-configured-with-short-periodduration)
+	- [3.8 Vault initialization creates dead contracts and breaks internal invariants](#38-vault-initialization-creates-dead-contracts-and-breaks-internal-invariants)
+	- [3.9 transitionsPeriod modifier can lock up Finance contract if configured with short periodDuration](#39-transitionsperiod-modifier-can-lock-up-finance-contract-if-configured-with-short-periodduration)
+	- [3.10 Voting does not check that functions are only called after initialization](#310-voting-does-not-check-that-functions-are-only-called-after-initialization)
+	- [3.11 Vault does not check that functions are only called after initialization](#311-vault-does-not-check-that-functions-are-only-called-after-initialization)
+	- [3.12 Insufficient security control protectState](#312-insufficient-security-control-protectstate)
+	- [3.13 Insecure delegatecall\(\) in DelegateScript and DeployDelegateScript](#313-insecure-delegatecall-in-delegatescript-and-deploydelegatescript)
+	- [3.14 Insufficient security control kernelIntegrity](#314-insufficient-security-control-kernelintegrity)
+	- [3.15 Add isInitialized modifier to public TokenManager functions](#315-add-isinitialized-modifier-to-public-tokenmanager-functions)
+	- [3.16 Unnecessary casting between unint64 and uint256](#316-unnecessary-casting-between-unint64-and-uint256)
+	- [3.17 Add missing isInitialized modifier to Finance functions](#317-add-missing-isinitialized-modifier-to-finance-functions)
+	- [3.18 Unnecessary Side-stepping of Solidity's static type system](#318-unnecessary-side-stepping-of-soliditys-static-type-system)
+	- [3.19 Add require to Finance.initialize that checks _vault is not null](#319-add-require-to-financeinitialize-that-checks-_vault-is-not-null)
+	- [3.20 Vault test cases insufficient](#320-vault-test-cases-insufficient)
+	- [3.21 IVaultConnector interface ambiguity could cause locked ether](#321-ivaultconnector-interface-ambiguity-could-cause-locked-ether)
+	- [3.22 NPM installed AragonOS contracts do not match audited AragonOS contracts](#322-npm-installed-aragonos-contracts-do-not-match-audited-aragonos-contracts)
+	- [3.23 Frequent unsafe use of address type instead of contract types](#323-frequent-unsafe-use-of-address-type-instead-of-contract-types)
+	- [3.24 Possible unsafe cast in EVMScriptRegistryFactory](#324-possible-unsafe-cast-in-evmscriptregistryfactory)
+	- [3.25 Explicitly define visibility for all state variables](#325-explicitly-define-visibility-for-all-state-variables)
+	- [3.26 Highlight potentially insecure functions](#326-highlight-potentially-insecure-functions)
+	- [3.27 NewPayment event not created for immediate payments](#327-newpayment-event-not-created-for-immediate-payments)
+	- [3.19 Incorrect canExecute\(\) vote check](#319-incorrect-canexecute-vote-check)
+	- [3.28 Incorrect canExecute\(\) vote check](#328-incorrect-canexecute-vote-check)
+	- [3.29 getTimestamp\(\) is redundant with solidity's built in block.timestamp](#329-gettimestamp-is-redundant-with-soliditys-built-in-blocktimestamp)
+	- [3.30 Redundant authentication function Voting.canForward\(\)](#330-redundant-authentication-function-votingcanforward)
+	- [3.31 Log and verify EVMScript return values](#331-log-and-verify-evmscript-return-values)
+	- [3.32 Vault depends on complex internal invariants that are unchecked](#332-vault-depends-on-complex-internal-invariants-that-are-unchecked)
+	- [3.33 AragonApp: Use of possibly undefined Solidity behavior](#333-aragonapp-use-of-possibly-undefined-solidity-behavior)
+	- [3.34 transitionsPeriod modifier missing from Finance fallback function](#334-transitionsperiod-modifier-missing-from-finance-fallback-function)
+	- [3.35 Add require to Finance.initialize that checks _vault is not null](#335-add-require-to-financeinitialize-that-checks-_vault-is-not-null)
+	- [3.36 Finance: setPaymentStatus does not have transitionsPeriod modifier](#336-finance-setpaymentstatus-does-not-have-transitionsperiod-modifier)
+- [4 Threat Model](#4-threat-model)
+	- [4.1 Overview](#41-overview)
+	- [4.2 DemocracyTemplate based DAO](#42-democracytemplate-based-dao)
+- [5 Tool based analysis](#5-tool-based-analysis)
+	- [5.1 Mythril](#51-mythril)
+	- [5.2 Solhint](#52-solhint)
+	- [5.3 Odyssey](#53-odyssey)
+- [6 Test Coverage Measurement](#6-test-coverage-measurement)
+- [Appendix 1 - File Hashes](#appendix-1---file-hashes)
+- [Appendix 2 - Severity](#appendix-2---severity)
+	- [A.2.1 - Minor](#a21---minor)
+	- [A.2.2 - Medium](#a22---medium)
+	- [A.2.3 - Major](#a23---major)
+	- [A.2.4 - Critical](#a24---critical)
+- [Appendix 3 - Storage map of org muzi5.aragonpm.eth](#appendix-3---storage-map-of-org-muzi5aragonpmeth)
+- [Appendix 4 - aragonOS inheritance tree](#appendix-4---aragonos-inheritance-tree)
+
 <!-- /MarkdownTOC -->
 
 ## 1 Summary
@@ -1093,7 +1097,7 @@ Vault depends on storage variable invariants to function properly. These invaria
 
 | Severity  | Status | Link | Remediation Comment |
 | ------------- | ------------- | ------------- | ------------- |
-| <img height="30px" src="static-content/major.png"/> |  <img height="30px" src="static-content/open.png"/> | [ issues/46](https://github.com/ConsenSys/aragonOS-audit-repo/issues/46)| The issue is currently under review |
+| <img height="30px" src="static-content/major.png"/> |  <img height="30px" src="static-content/closed.png"/> | [ issues/46](https://github.com/ConsenSys/aragonOS-audit-repo/issues/46)| The issue is currently under review |
 
 
 #### Description 
@@ -1150,7 +1154,7 @@ Add `require` to Finance.initialize that checks _vault is not null.
 
 | Severity  | Status | Link | Remediation Comment |
 | ------------- | ------------- | ------------- | ------------- |
-| <img height="30px" src="static-content/minor.png"/> |  <img height="30px" src="static-content/open.png"/> | [ issues/45](https://github.com/ConsenSys/aragon-apps-audit-repo/issues/45)| The issue is currently under review |
+| <img height="30px" src="static-content/minor.png"/> |  <img height="30px" src="static-content/closed.png"/> | [ issues/45](https://github.com/ConsenSys/aragon-apps-audit-repo/issues/45)| The issue is currently under review |
 
 
 #### Description
