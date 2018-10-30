@@ -84,15 +84,15 @@ ________________
 * **Auditors:** Gerhard Wagner, Suhabe Bugrara, Jon Maurelian, Gonçalo Sá, Niran Babalola
 * **GitHub :** https://github.com/aragon/aragon
 * **Languages:** Solidity, Solidity Assembly, JavaScript
-* **Date:** 9th April - 11th of May 2018
+* **Date:** 16th October - 29th of October 2018
 
 #### Number of issues per severity
 
 
 | | <img height="30px"  src="static-content/minor.png"/> | <img height="30px" src="static-content/medium.png"/>  | <img height="30px" src="static-content/major.png"/> | <img height="30px" src="static-content/critical.png"/> | 
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| <img height="30px"  src="static-content/open.png"/> | **1**  |  **2**  | **1**  | **0** |
-| <img height="30px"  src="static-content/closed.png"/> | **10**  |  **9**  | **10**  | **1** |
+| <img height="30px"  src="static-content/open.png"/> | **0**  |  **2**  | **0**  | **0** |
+| <img height="30px"  src="static-content/closed.png"/> | **10**  |  **10**  | **11**  | **1** |
 
 
 ________________
