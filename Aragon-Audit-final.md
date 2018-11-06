@@ -73,7 +73,9 @@
 
 <img height="120px" Hspace="30" Vspace="10" align="right" src="static-content-project-specific/aragon.png"/> 
 
-The Aragon team has been developing a contract system that allows to create modular and upgradeable smart contracts to power decentralized organizations. ConsenSys Diligence was invited to conduct a comprehensive audit of the Aragon core component aragonOS and its native applications Voting, Finance, Vault and Token Manager. The audit was conducted with the awareness that the system will be used by end users who intend to create their own DAOs as well as developers who will build applications on top of aragonOS. The primary objective of the audit was to reveal issues that could jeopardize the integrity of a DAO deployment and the funds it holds. 
+The Aragon team is developing a contract system that enables the creation modular and upgradeable smart contracts to power decentralized organizations. ConsenSys Diligence was invited to conduct a comprehensive audit of the Aragon core component, aragonOS and its native applications Voting, Finance, Vault and Token Manager. The audit was conducted with the awareness that the system will be used by end users who intend to create their own DAOs as well as developers who will build applications on top of aragonOS. The primary objective of the audit was to reveal issues that could jeopardize the integrity of a DAO deployment and the funds it holds. 
+
+This report is the result of a [follow on audit](https://github.com/ConsenSys/aragon-audit-report), performed to verify changes made as a result of our initial audit. 
 
 ### 1.1 Audit Dashboard
 
@@ -103,22 +105,17 @@ ________________
 
 ### 1.2 Audit Goals
 
-The focus of the audit was to verify that the smart contract system is secure, resilient and working according to its specifications. The audit activities can be grouped in the following three categories:  
+The primary focus of the audit was to verify that changes made to the  smart contract system since our initial audit properly addressed our findings. Given the size and complexity of the system, and the large number of changes made, this follow on audit was not as exhaustive as a typical audit. 
 
-**Security:**
-Identifying security related issues within each contract and within the system of contracts.
+Once the remediatiosn had been reviewed, with the remaining available resources we also inspected the codebase from the following perspectives: 
 
-**Sound Architecture:**
-Evaluation of the architecture of this system through the lens of established smart contract best practices and general software best practices.
+* Source code review
+* Static code analysis, symbolic execution
+* Test suite and driver verification 
+* Code accuracy vs. specification review
+* Best practices review
 
-**Code Correctness and Quality:**
-A full review of the contract source code. The primary areas of focus include:
 
-* Correctness 
-* Readability 
-* Sections of code with high complexity
-* Improving scalability
-* Quantity and quality of test coverage
 
 ### 1.3 System Overview 
 
@@ -145,14 +142,14 @@ A Dapp test system was provided at http://aragon.aragonpm.com/. All of the contr
 
 **Design**
 
-AragonOS allows to develop an application without the need to design or implement authentication or governance controls. The most important concepts of the aragonOS are listed below: 
+AragonOS faciliates the creation of application without the need to design or implement authentication or governance controls. The most important concepts of AragonOS are:
 
-* **Kernel**: is at the core of every DAO. It manages one very important mapping to keep track of the different base contract address depending on the application, registered apps in the kernel (such as the ACL) and the kernel’s own base contract.
+* **Kernel**: the core of every DAO. It manages an important mapping to keep track of the different base contract address depending on the application, registered apps in the kernel (such as the ACL) and the Kernel’s own base contract.
 * **ACL**: is linked to the Kernel and manages permissions for all registered apps. These permissions are highly customizable and they can be used from an `AragonApp`. 
-* **Forwarders and EVMScript**: Forwarders are one of the most important concepts of aragonOS. Rather than hardcoding the notion of a vote into each separate app’s functionality and ACL, one can instead use a generic Voting App, which implements the forwarding interface, to pass actions forward to other apps after successful votes.
+* **Forwarders and EVMScript**: Forwarders are one of the most important concepts of aragonOS. Rather than hard-coding the notion of a vote into each separate app’s functionality and ACL, one can instead use a generic Voting App, which implements the forwarding interface, to pass actions forward to other apps after successful votes. This also enable upgradeability by changing the address of the implementing contract.
 * **Aragon Package Manager (APM)**: The Aragon Package Manager (APM) is built on top of aragonOS and is integrated as a part of aragonOS. It is a DAO running on the same Aragon (taking advantage of upgradeability and access control), that‘s used to build Aragon DAOs. 
 
-In oder to really understand how all the components interact it is best to analyze the life cycle of an aragonOS call. The below animated figure shows such a call and the execution steps it takes (source [aragon wiki](https://wiki.aragon.one)): 
+In order to really understand how all the components interact it is best to analyze the life cycle of an aragonOS call. The below animated figure shows such a call and the execution steps it takes (source [aragon wiki](https://wiki.aragon.one)): 
 
 <img align="right" src="https://wiki.aragon.one/submodules/aragonOS/docs/rsc/os3.gif"/> 
 
@@ -161,17 +158,17 @@ In oder to really understand how all the components interact it is best to analy
 
 With consideration to the level of security required by this system, the following key observations and recommendations are taken from our review:
 
-* **High Complexity:** The greatest risk in the system is due to the high levels of complexity. The system is both highly configurable, as well as highly interdependent, making it difficult to reason about all the paths and edge cases.  The system consists of a large number of contracts and a very complex inheritance tree (see also [Appendix 4 - aragonOS inheritance tree](#appendix-4---aragonos-inheritance-tree)). It is recommended to refactor and simplify the inheritance tree where possible.
+* **High Complexity:** The greatest risk in the system is due to the high levels of complexity. The system is both highly configurable, as well as highly interdependent, making it difficult to reason about all the paths and edge cases.  The system consists of a large number of contracts and a complex inheritance tree (see also [Appendix 4 - aragonOS inheritance tree](#appendix-4---aragonos-inheritance-tree)). It is recommended to refactor and simplify the inheritance tree where possible.
   - **Remediation comment:** Our follow up review found the system much simpler and easier to follow.
 * **Refactor insecure `EVMScriptExecutor` contracts:** Critical vulnerabilities have been discovered in the way that `EVMScript` can be executed. The affected contracts should either be removed or redesigned with additional security controls. 
   - **Remediation comment:** The dangerous `DelegateScript` and `DeployDelegateScript` have been removed from the code base.
 * **Redesign contract constructor**: Some of the contracts in aragonOS do not use a default constructor but rely on the function `initialise()` as a pseudo constructor. Issues can occur if the constructor is never called and it can be initialized by a malicious user. Also functionality that relies on the pseudo constructor being called before, could behave in unexpected ways and lead to security issues. It is recommended to ensure that all pseudo constructors are called during deployment. 
   - **Remediation comment:** Additional functionality has been provided to enable contracts to be automatically initalized upon deployment.
 * **Whitelist low level calls**: Several components in aragonOS rely on the low level call `delegatecall()`. It is important to build security controls around functions that leverage `delegatecall()` and to ensure that only trusted contracts can be called. 
-  - **Remediation comment:** As noted above, some delegatecall functionality has been removed. However it is an essential part of Aragon's desired upgradeability. We have reviewed the use of delegatecall to the best of our ability, and cannot find user provided addresses used for delegatecalls, which is the greatest source of danger.
+  - **Remediation comment:** As noted above, some `delegatecall` functionality has been removed. However it is an essential part of Aragon's desired upgradeability. We have reviewed the use of `delegatecall` to the best of our ability, and cannot find user provided addresses used for `delegatecalls`, which is the greatest source of danger.
 * **Test coverage is incomplete:** Some parts of the contract system do not have test coverage. Any contract system that is used on the main net should have as a minimum requirement a 100% test coverage. 
   - **Remediation comment:** Test coverage is improved, however our review found some remaining untested behavior.
-* **Fix all issues:** It is recommended to fix all the issues listed in the below chapters, at the very least the ones with severity Critical, Major and Medium. For more information on issue severity ratings see [Appendix 2 - Severity](#appendix-2---severity). All issues have been created as issues on in their respective GitHub repositories.
+* **Fix all issues:** It is recommended to fix all the issues listed in the below chapters, at least the ones with severities of Critical, Major and Medium. For more information on issue severity ratings see [Appendix 2 - Severity](#appendix-2---severity). All issues have been created as issues on in their respective GitHub repositories.
   - **Remediation comment:** The great majority are fixed. A few discovered during the final review remain open. We will endeavour to update this report once more to reflect the final issue resolution status.
 
 
@@ -802,7 +799,7 @@ Vault test cases are insufficient. For example, they do not test the following s
 The Finance contract critically depends on the `IVaultConnector.deposit` function to throw if the deposit fails for any reason. Confusingly, the `IVaultConnector.deposit` function signature has a boolean return value which is unchecked at call sites. If a developer writes a contract that inherits from `IVaultConnector.deposit` and, based on the boolean return value in the signature, decides to communicate a failed deposit by returning false instead of throwing, ether will get locked in the Finance contract.
 
 #### Remediation 
-1. Remove the boolean return value from the signatures of the the IVaultConnector `deposit` and `transfer` functions.
+1. Remove the boolean return value from the signatures of the IVaultConnector `deposit` and `transfer` functions.
 
 2. Add documentation to the IVaultConnector interface explaining that functions should throw if they fail for any reason.
 
@@ -1169,7 +1166,7 @@ A threat model was created during the audit process in order to analyze the atta
 
 ### 4.1 Overview 
 
-aragonOS and its apps are a fairly complex contract system with a very open design. Developers or users have a range of options on how they choose to deploy and customize the system. Creating a comprehensive threat model for all possible use cases was not possible due time constraints and simply because it is a very open system and it remains to be seen on how the community will use it. 
+aragonOS and its apps are a fairly complex contract system with a open design. Developers or users have a range of options on how they choose to deploy and customize the system. Creating a comprehensive threat model for all possible use cases was not possible due time constraints and simply because it is a open system and it remains to be seen on how the community will use it. 
 
 ### 4.2 DemocracyTemplate based DAO
 
@@ -1344,7 +1341,7 @@ The SHA1 hashes of the source code files in scope of the audit are listed in the
 
 ### A.2.1 - Minor
 
-Minor issues are generally subjective in nature, or potentially deal with topics like "best practices" or "readability".  Minor issues in general will not indicate an actual problem or bug in code.
+Minor issues are generally subjective in nature, or potentially deal with topics like "best practices" or "readability". Minor issues in general will not indicate an actual problem or bug in code.
 
 The maintainers should use their own judgment as to whether addressing these issues improves the codebase.
 
