@@ -1,2 +1,0 @@
-INFO:Detectors:[91m Uninitialized state variable in aragonos-acl-flat.sol, Contract: ACL, Variable: permissionParams, Used in ['getPermissionParamsLength', 'getPermissionParam', '_saveParams', '_evalParam'][0m
-INFO:Slither:aragonos-acl-flat.sol analyzed (24 contracts), 1 result(s) found

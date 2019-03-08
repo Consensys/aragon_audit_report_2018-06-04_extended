@@ -1,4 +1,0 @@
-INFO:Detectors:[91m Uninitialized state variable in aragon-survey-flat.sol, Contract: MiniMeToken, Variable: totalSupplyHistory, Used in ['totalSupplyAt', 'generateTokens', 'destroyTokens'][0m
-INFO:Detectors:[91m Uninitialized state variable in aragon-survey-flat.sol, Contract: MiniMeToken, Variable: balances, Used in ['doTransfer', 'balanceOfAt', 'generateTokens', 'destroyTokens'][0m
-INFO:Detectors:[91m Uninitialized state variable in aragon-survey-flat.sol, Contract: Survey, Variable: surveys, Used in ['newSurvey', 'resetVote', 'voteOptions', 'voteOption', 'canVote', 'getSurvey', 'getSurveyMetadata', 'getVoterState', 'getOptionPower', 'isParticipationAchieved'][0m
-INFO:Slither:aragon-survey-flat.sol analyzed (30 contracts), 3 result(s) found

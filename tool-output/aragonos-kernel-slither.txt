@@ -1,1 +1,0 @@
-INFO:Slither:aragonos-kernel-flat.sol analyzed (26 contracts), 0 result(s) found

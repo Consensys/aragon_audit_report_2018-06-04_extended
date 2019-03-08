@@ -1,3 +1,0 @@
-INFO:Detectors:[91m Uninitialized state variable in aragon-tokenmanager-flat.sol, Contract: MiniMeToken, Variable: totalSupplyHistory, Used in ['totalSupplyAt', 'generateTokens', 'destroyTokens'][0m
-INFO:Detectors:[91m Uninitialized state variable in aragon-tokenmanager-flat.sol, Contract: MiniMeToken, Variable: balances, Used in ['doTransfer', 'balanceOfAt', 'generateTokens', 'destroyTokens'][0m
-INFO:Slither:aragon-tokenmanager-flat.sol analyzed (30 contracts), 2 result(s) found

@@ -1,1 +1,0 @@
-INFO:Slither:aragon-vault-flat.sol analyzed (24 contracts), 0 result(s) found
